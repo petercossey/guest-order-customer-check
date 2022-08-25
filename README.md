@@ -7,6 +7,11 @@ It's possible to have checkout settings which allow registered users to place or
 The downside is that any order placed as a guest (even for customers who have a registered email address) cannot be included on the customers account pages due to security reasons.
 
 ## Solution
+
+> **Code Samples Disclaimer**
+>
+> This document may include code samples for demonstration and illustration purposes. BigCommerce provides these samples without guarantee or warranty. It is the responsibility of Client, or an agency contracted by Client, to ensure any custom code functions as expected.
+
 Create a webhook for the scope store/order/created and use a serverless function or custom middleware to receive the webhook event and update the order if meets the following criteria:
 - Order is a guest order, i.e. "customer_id" = 0
 - A customer already exists with an email address matching the email on the order billing address, i.e. "billing_address.email"
