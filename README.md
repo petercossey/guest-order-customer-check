@@ -11,6 +11,8 @@ The downside is that any order placed as a guest (even for customers who have a 
 > **Code Samples Disclaimer**
 >
 > This document may include code samples for demonstration and illustration purposes. BigCommerce provides these samples without guarantee or warranty. It is the responsibility of Client, or an agency contracted by Client, to ensure any custom code functions as expected.
+>
+> This POC doesn't utlise of the security features available to BigCommerce webhook callbacks - implementing webhooks in a product system to incorporate [relevant security precautions](https://developer.bigcommerce.com/docs/ZG9jOjIyMDczMg-overview#security).
 
 Create a webhook for the scope store/order/created and use a serverless function or custom middleware to receive the webhook event and update the order if meets the following criteria:
 - Order is a guest order, i.e. "customer_id" = 0
