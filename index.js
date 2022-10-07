@@ -30,7 +30,7 @@ fastify.post('/webhooks', async (req, reply) => {
     const orderData = await getOrder(orderId)
     // console.log(orderData)
     if (orderData.customer_id === 0) {
-      // search for customer using billind address email
+      // search for customer using billing address email
       const email = orderData.billing_address.email
       const customerSearch = await getCustomer(email)
       if (customerSearch.data.length > 0) {
