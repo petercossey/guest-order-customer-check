@@ -1,5 +1,5 @@
 # Guest order customer check
-Proof of concept for a middleware which updates guests orders where a custom already exists.
+Proof of concept for a middleware which updates guests orders where a customer already exists.
 
 ## Problem statement
 It's possible to have checkout settings which allow registered users to place orders as guests - the advantage of that configuration is that it removes any sign-in friction for checkout.
